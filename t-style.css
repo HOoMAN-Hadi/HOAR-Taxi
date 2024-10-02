@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=Indie Flower");
+@import url("https://fonts.googleapis.com/css?family=Sofia");
+@import url("https://fonts.googleapis.com/css?family=Faster One");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.all {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: url("images/sky.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  font-family: Faster One, sofia, Indie Flower;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+.all h1 {
+  position: absolute;
+  top: 150px;
+  font-size: 60px;
+  animation: hoar 5s infinite alternate ease-in-out;
+}
+@keyframes hoar {
+  0% {
+    color: #000;
+  }
+  10% {
+    color: rgb(39, 0, 0);
+  }
+  25% {
+    color: rgb(59, 0, 0);
+  }
+  50% {
+    color: rgb(143, 0, 0);
+  }
+  75% {
+    color: rgb(201, 0, 0);
+    text-shadow: 0 0 1px rgb(80, 0, 0);
+  }
+  100% {
+    color: rgb(255, 0, 0);
+    text-shadow: 0 0 1px rgb(80, 0, 0), 0 0 2px rgb(56, 0, 0),
+      0 0 3px rgb(44, 0, 0);
+  }
+}
+.road {
+  width: 500%;
+  height: 200px;
+  background: url("images/road.jpg");
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background-repeat: repeat-x;
+  animation: road 0.5s infinite linear;
+}
+@keyframes road {
+  100% {
+    /* transform: translateX(-3400px); */
+    left: -100%;
+  }
+}
+.city {
+  width: 500%;
+  height: 200px;
+  background: url(images/city.png) repeat-x;
+  position: absolute;
+  bottom: 200px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  animation: city 25s infinite linear;
+}
+@keyframes city {
+  100% {
+    left: -100%;
+  }
+}
+.car i {
+  font-size: 30px;
+  z-index: 2;
+  position: absolute;
+  top: 69px;
+  right: 157px;
+  animation: car 1s linear infinite;
+}
+.car {
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+.car img {
+  width: 100%;
+  animation: car 1s linear infinite;
+}
+@keyframes car {
+  0% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(-1px);
+  }
+}
+.wheel {
+  position: absolute;
+  left: 50%;
+  bottom: 178px;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.wheel img {
+  width: 72px;
+  height: 72px;
+  animation: wheel 0.4s linear infinite;
+}
+.back-wheel {
+  position: absolute;
+  left: -165px;
+}
+.front-wheel {
+  position: absolute;
+  left: 80px;
+}
+@keyframes wheel {
+  100% {
+    transform: rotate(1turn);
+  }
+}
